@@ -1,0 +1,206 @@
+.createpost-container {
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #222;
+  padding: 40px 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.createpost-container.dark {
+  background: linear-gradient(180deg, #18151f 0%, #0b0b0b 100%);
+  color: #f8f8f8;
+}
+
+/* Title */
+.createpost-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7c3aed;
+  margin-bottom: 20px;
+}
+
+.createpost-container.dark .createpost-title {
+  color: #a78bfa;
+}
+
+/* Form Section */
+.createpost-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Room Dropdown */
+.room-select {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.room-select select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1.5px solid #a78bfa;
+  background: #faf5ff;
+  color: #222;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.createpost-container.dark .room-select select {
+  background: #1a1a1d;
+  border-color: #a78bfa;
+  color: #f0eaff;
+}
+
+/* Textarea */
+textarea {
+  width: 60%;
+  height: 140px;
+  border-radius: 12px;
+  border: 1.5px solid #a78bfa;
+  padding: 12px;
+  font-size: 1rem;
+  background: #faf5ff;
+  color: #222;
+  outline: none;
+  resize: none;
+  transition: all 0.3s ease;
+}
+
+.createpost-container.dark textarea {
+  background: #1a1a1d;
+  border-color: #a78bfa;
+  color: #f0eaff;
+}
+
+/* Post Button */
+.post-btn {
+  background: #7c3aed;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.post-btn:hover {
+  background: #6d28d9;
+}
+
+/* Posts List */
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+/* Post Cards */
+.post-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 20px;
+  width: 60%;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.createpost-container.dark .post-card {
+  background: #1e1e22;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.05);
+  color: #e9e6ff;
+}
+
+/* Post Texts */
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.post-user {
+  font-weight: 600;
+  color: #7c3aed;
+}
+
+.createpost-container.dark .post-user {
+  color: #c4b5fd;
+}
+
+.post-date {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.createpost-container.dark .post-date {
+  color: #9ca3af;
+}
+
+.post-message {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #111;
+}
+
+.createpost-container.dark .post-message {
+  color: #f3f4f6;
+}
+
+/* Like Button */
+.emoji-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.emoji-bar button {
+  background: transparent;
+  border: none;
+  color: #7c3aed;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.emoji-bar button:hover {
+  color: #6d28d9;
+}
+
+.createpost-container.dark .emoji-bar button {
+  color: #a78bfa;
+}
+
+.createpost-container.dark .emoji-bar button:hover {
+  color: #c4b5fd;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .room-select,
+  textarea,
+  .post-card {
+    width: 90%;
+  }
+}

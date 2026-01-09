@@ -1,0 +1,130 @@
+.home-container {
+  padding: 30px;
+  background-color: #f8f6ff;
+  min-height: 100vh;
+  color: #5a0bc0;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.home-logo {
+  width: 150px;
+  height: 150px;
+}
+
+.brand {
+  color: #9c27b0;
+  font-weight: 700;
+}
+
+.rooms-section {
+  margin-top: 60px;
+}
+
+.rooms-section h2 {
+  text-align: center;
+  color: #5a0bc0;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ✅ 4 cards per row */
+  gap: 25px;
+  justify-items: center;
+}
+
+@media (max-width: 1200px) {
+  .rooms-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .rooms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.room-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  width: 100%;
+  max-width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(156, 39, 176, 0.3);
+}
+
+.room-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.room-icon {
+  font-size: 28px;
+}
+
+.room-card p {
+  color: #444;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.room-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-btn,
+.view-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.create-btn {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.create-btn:hover {
+  background-color: #7b1fa2;
+}
+
+.view-btn {
+  background-color: #e3d4ff;
+  color: #5a0bc0;
+}
+
+.view-btn:hover {
+  background-color: #d1b7ff;
+}
